@@ -27,7 +27,7 @@ public class MainController {
     @RequestMapping(value = "/table", method = RequestMethod.POST)
     public String saveInfo(@RequestParam("fName") String fName, @RequestParam("sName") String sName,
                            @RequestParam("lName") String lName, @RequestParam(value = "bDate", required = false) String bDate,
-                           @RequestParam(value = "sex", required = false) String sex) {
+                           @RequestParam(value = "sex", required = false) Integer sex) {
         dao.addUserInfo(fName, sName, lName, bDate, sex);
         return "redirect:/table";
     }

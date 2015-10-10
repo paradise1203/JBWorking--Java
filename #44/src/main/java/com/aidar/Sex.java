@@ -22,4 +22,12 @@ public enum Sex {
         return type;
     }
 
+    public static Sex getSex(Integer value) {
+        for (Sex sex : values()) {
+            if (sex.getValue().equals(value))
+                return sex;
+        }
+        return null;
+    }
+
 }

@@ -15,9 +15,9 @@
         <label for="bDate"> Birth date: </label>
         <input type="date" id="bDate" name="bDate">
         <label for="male"> male </label>
-        <input type="radio" id="male" name="sex" value="male">
+        <input type="radio" id="male" name="sex" value=1>
         <label for="female"> female </label>
-        <input type="radio" id="female" name="sex" value="female">
+        <input type="radio" id="female" name="sex" value=2>
         <input type="submit" value="Submit">
     </form>
 </body>

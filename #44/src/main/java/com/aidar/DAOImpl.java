@@ -15,26 +15,17 @@ public class DAOImpl implements DAO {
     }
 
     @Override
-    public void addUserInfo(String fName, String sName, String lName, String bDate, String sex) {
+    public void addUserInfo(String fName, String sName, String lName, String bDate, Integer sex) {
         userInfo.setFirstName(fName);
         userInfo.setSecondName(sName);
         userInfo.setLastName(lName);
         if (bDate != null) {
             userInfo.setBirthDate(bDate);
         }
-        if (sex != null) {
-            switch (sex) {
-                case "male":
-                    userInfo.setSex(Sex.MALE);
-                    break;
-                case "female":
-                    userInfo.setSex(Sex.FEMALE);
-                    break;
-                default:
-                    userInfo.setSex(Sex.NONE);
-                    break;
-            }
+        if (sex == null) {
+            sex = 0;
         }
+        userInfo.setSex(Sex.getSex(sex));
     }
 
 }

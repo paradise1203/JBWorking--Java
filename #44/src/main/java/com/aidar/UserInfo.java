@@ -9,12 +9,12 @@ public class UserInfo {
     private String secondName;
     private String lastName;
     private String birthDate;
-    private String sex;
+    private Sex sex;
 
     public UserInfo() {
     }
 
-    public UserInfo(String firstName, String secondName, String lastName, String birthDate, String sex) {
+    public UserInfo(String firstName, String secondName, String lastName, String birthDate, Sex sex) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.lastName = lastName;
@@ -54,11 +54,11 @@ public class UserInfo {
         this.birthDate = birthDate;
     }
 
-    public String getSex() {
+    public Sex getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    public void setSex(Sex sex) {
         this.sex = sex;
     }
 

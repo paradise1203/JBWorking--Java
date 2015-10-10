@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -16,11 +17,21 @@
         </thead>
         <tbody>
             <tr>
-                <td> ${fName} </td>
-                <td> ${sName} </td>
-                <td> ${lName} </td>
-                <td> ${bDate} </td>
-                <td> ${sex} </td>
+                <td>
+                    <c:if test="${userInfo.firstName!=null}"> ${userInfo.firstName} </c:if>
+                </td>
+                <td>
+                    <c:if test="${userInfo.secondName!=null}"> ${userInfo.secondName} </c:if>
+                </td>
+                <td>
+                    <c:if test="${userInfo.lastName!=null}"> ${userInfo.lastName} </c:if>
+                </td>
+                <td>
+                    <c:if test="${userInfo.birthDate!=null}"> ${userInfo.birthDate} </c:if>
+                </td>
+                <td>
+                    <c:if test="${userInfo.sex!=null}">${userInfo.sex} </c:if>
+                </td>
             </tr>
         </tbody>
     </table>

@@ -23,10 +23,16 @@ public class DAOImpl implements DAO {
             userInfo.setBirthDate(bDate);
         }
         if (sex != null) {
-            if (sex.equals("male")) {
-                userInfo.setSex(Sex.MALE);
-            } else {
-                userInfo.setSex(Sex.FEMALE);
+            switch (sex) {
+                case "male":
+                    userInfo.setSex(Sex.MALE);
+                    break;
+                case "female":
+                    userInfo.setSex(Sex.FEMALE);
+                    break;
+                default:
+                    userInfo.setSex(Sex.NONE);
+                    break;
             }
         }
     }

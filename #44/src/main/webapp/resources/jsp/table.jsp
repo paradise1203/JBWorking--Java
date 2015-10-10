@@ -30,7 +30,7 @@
                     <c:if test="${userInfo.birthDate!=null}"> ${userInfo.birthDate} </c:if>
                 </td>
                 <td>
-                    <c:if test="${userInfo.sex!=null}">${userInfo.sex} </c:if>
+                    <c:if test="${userInfo.sex.type!=null}">${userInfo.sex.type} </c:if>
                 </td>
             </tr>
         </tbody>
